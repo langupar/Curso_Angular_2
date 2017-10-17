@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
         <header>
 	        <h1>Bienvenidos al curso {{curso}}!</h1>
         </header>
+        <app-logo></app-logo>
         `,
-        styles: ['header {text-align: center;font-size: 1.8em;color : papayawhip;']
+        styles: ['header {text-align: center;font-size: 1.8em;color: papayawhip;}']
 })
 
 export class CabezaComponent implements OnInit {
