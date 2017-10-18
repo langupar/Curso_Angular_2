@@ -8,17 +8,26 @@ import { Component, OnInit } from '@angular/core';
 export class Datos1Component implements OnInit {
   sIdea: string;
   aIdeas: Array<string>;
+  // estiloColor: string;
+  estilos: {};
+  // tamanoLetra: number;
+  precio: number;
+
   constructor() { }
 
   ngOnInit() {
     this.sIdea = '';
     this.aIdeas = [];
+    this.estilos = {'color': 'blue', 'font-size': 2};
+    this.precio = 23;
   }
 
   btnInsert() {
     if (this.sIdea != '') {
       this.aIdeas.push(this.sIdea);
       this.sIdea = '';
+      // this.estiloColor = 'blue';
+     // this.tamanoLetra = 2;
      }
   }
 

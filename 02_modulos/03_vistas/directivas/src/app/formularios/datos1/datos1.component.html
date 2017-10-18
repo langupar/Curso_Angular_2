@@ -1,10 +1,16 @@
 <div class='container'>
-<p>  
-  <label for="idea">Dime una idea</label>
-  <input type="text" id="idea" name="name" [(ngModel)]="sIdea">
+<!--<p [style.color]="estiloColor" 
+   [style.font-size.em]="tamanoLetra">-->
+   <p [ngStyle]="estilos">
+  <label for="autor">Autor</label>
+  <input type="text" id="autor" name="name" [(ngModel)]="sIdea">
 </p>
 
   <button (click)="btnInsert()">Añadir</button>
+  <p>
+    Precio; {{precio | currency}}
+
+  </p>
   <!--
     <div [hidden]="aIdeas.length ? false:true"></div>
   -->
