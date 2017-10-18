@@ -8,8 +8,10 @@
 
   <button (click)="btnInsert()">Añadir</button>
   <p>
-    Precio; {{precio | currency}}
-
+    Precio: {{precio | currency}}
+  </p>
+  <p>
+    Estilos: {{estilos | json}}
   </p>
   <!--
     <div [hidden]="aIdeas.length ? false:true"></div>
