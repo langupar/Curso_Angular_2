@@ -12,7 +12,7 @@ export class Datos1Component implements OnInit {
   estilos: {};
   // tamanoLetra: number;
   precio: number;
-
+ 
   constructor() { }
 
   ngOnInit() {
