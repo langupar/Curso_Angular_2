@@ -10,10 +10,25 @@ import { Component, OnInit } from '@angular/core';
 export class Datos1Component implements OnInit {
  oLibro: Libro;
  aPaises: Array<Pais>;
+ estaEnviado: boolean;
 
  constructor() { }
 
   ngOnInit() {
+    this.btnBorrar();
+    this.aPaises = [
+      {codigo: 'UK', nombre: 'Inglaterra' },
+      {codigo: 'FR', nombre: 'Francia' },
+      {codigo: 'IT', nombre: 'Italia' },
+      {codigo: 'SP', nombre: 'España' }];
+      this.estaEnviado = false;
+   }
+
+  btnInsert() {
+    this.estaEnviado = true;
+  }
+
+  btnBorrar() {
     this.oLibro = {
       autor: '',
       titulo: '',
@@ -23,15 +38,7 @@ export class Datos1Component implements OnInit {
       genero: '',
       pais: {codigo: '', nombre: '' }
     };
-
-    this.aPaises = [
-      {codigo: 'UK', nombre: 'Inglaterra' },
-      {codigo: 'FR', nombre: 'Francia' },
-      {codigo: 'IT', nombre: 'Italia' },
-      {codigo: 'SP', nombre: 'España' }];
-   }
-
-  btnInsert() {
+    this.estaEnviado = false;
   }
 
 }
